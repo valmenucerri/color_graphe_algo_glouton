@@ -1,5 +1,5 @@
 '''
-Créer un fichier .net qui contient des données aléatoires, conforme à la forme des fichiers .net fournis pour tester nos programmes. Le fichier créé possède le nombre de sites que l'on désire, ce qui permet de créer beaucoup de fichiers .net de tailles différentes, pour tester les codes.
+Créer un fichier .net qui contient des données aléatoires
 '''
 
 import random as r
