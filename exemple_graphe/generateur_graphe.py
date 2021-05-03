@@ -7,7 +7,7 @@ import random as r
 N = 10  # A changer comme désiré
 
 # créer un fichier try.net contenant N lignes contenant des couples aléatoires
-with open('exemple{}.net'.format(N), 'w') as t:
+with open('Résultats/exemple{}.net'.format(N), 'w') as t:
     t.write(str(N) + '\n')
     for a in range(N - 1):
         for b in range(int(r.randint(0, N - 1) ** 1 / 2)):

@@ -1,11 +1,11 @@
 from Creer_resultat import creer_fichier
 def assigner_couleur(dico,N):
     '''Assigner une couleur, representee par un reel, à chaque noeud, en utilisant le minimum de couleur
-    Entree : dico, le dictionnaire représentant le graphe
-    Entree : N le nombre de noeuds du graphe
+    :param: dico, le dictionnaire représentant le graphe. type : dict
+    :param : N le nombre de noeuds du graphe; type : int
 
-    Sortie : couleur, la liste des couleurs utilisees
-    Sortie : dico, le dictionnaire representant le graphe, avec les couleurs de chaque noeud indiquees
+    :return : couleur, la liste des couleurs utilisees. type : list
+    :return: dico, le dictionnaire representant le graphe, avec les couleurs de chaque noeud indiquees. type : dict
     '''
     couleur = []
     c_appli = 0
@@ -30,12 +30,12 @@ def assigner_couleur(dico,N):
 
 def non_adja_liste(element,liste,dico):
     '''Vérifier si un élément est adjacent à d'autres éléments particuliers, stockés dans une liste
-    Entree : element, l'element dont on veut vérifier le caractère adjacent
-    Entree : liste, la liste contenant les noeuds que l'on veut comparer à element
-    Entree : dico, le dictionnaire représentant le graphe
+    :param : element, l'element dont on veut vérifier le caractère adjacent. type : int
+    :param : liste, la liste contenant les noeuds que l'on veut comparer à element. type : list
+    :param : dico, le dictionnaire représentant le graphe. type : dict
 
-    Sortie : True , l'element n'est adjacent à aucun element de la liste
-    Sortie : False , l'element est adjacent à au moins un élément de la liste
+    :return : True , l'element n'est adjacent à aucun element de la liste. type : bool
+    :return: False , l'element est adjacent à au moins un élément de la liste. type : bool
     '''
     i = 0
     continu = True

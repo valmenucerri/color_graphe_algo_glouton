@@ -1,6 +1,6 @@
 '''Associer une couleur à chaque noeud d'un graphe, en commençant par le noeud ayant le plus d'arêtes'''
 from Creer_resultat import creer_fichier
-from associer_couleur import non_adja_liste
+from Associer_couleur.associer_couleur import non_adja_liste
 
 def assigner_couleur_triee(dico,N,ordre):
     '''Assigner une couleur, representee par un reel, à chaque noeud, en utilisant le minimum de couleur, et en considerant les noeuds par ordre décroissant de nb d'arêtes
