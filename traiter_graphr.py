@@ -1,5 +1,5 @@
-#Traiter les informations du graphe, en supposant que celui-ci est représenté comme un fichier (voir exemple)
-
+'''Traiter les informations du graphe, en supposant que celui-ci est représenté comme un fichier (voir exemple)
+'''
 def recup_fichier(liste):
     graphe = str(liste[-1])
     return graphe
@@ -8,7 +8,7 @@ def recup_fichier(liste):
 
 def nbr_noeud(graphe):
     with open(graphe,'r') as fichier:
-        N =  fichier.readline()
+        N = fichier.readline()
         N = int(N)
     return N
 

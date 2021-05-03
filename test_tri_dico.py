@@ -1,3 +1,4 @@
+
 from traiter_graphr import liste_ordre_dico
 dico ={0: {1, 2}, 1: set(), 2: {0, 1, 4}, 3: {4, 5}, 4: {3, 5}, 5: {3}}
 
