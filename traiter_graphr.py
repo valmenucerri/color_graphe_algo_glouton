@@ -38,7 +38,7 @@ def liste_ordre_dico(dico):
     for i in dico.values():
         nb_arete.append(len(i))
 
-    tri(dico,nb_arete)
+    return nb_arete
 
 def tri(dico,liste):
     k = len(liste)
@@ -48,6 +48,4 @@ def tri(dico,liste):
         element = liste.index(maximum)
         liste_indice.append(element)
         liste[element] = -1
-
-
     return liste_indice
