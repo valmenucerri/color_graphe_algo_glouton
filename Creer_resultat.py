@@ -5,4 +5,4 @@ import sys
 def creer_fichier(couleur,dico):
     with open("resultat_fichier_{}".format(str(sys.argv[-1])),'w') as fichier:
         fichier.write("La liste des couleurs : "+" "+str(couleur)+"\n")
-        fichier.write("Le dictionnaire rempli avec les couleurs :"+" "+str(dico)+"\n")
+        fichier.write("Le graphe rempli avec les couleurs :"+" "+str(dico)+"\n")
