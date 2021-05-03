@@ -1,0 +1,1 @@
+#Associer couleur comme associer_couleur.py, mais en considérant les noeuds par nombre décroissant d'aretes
