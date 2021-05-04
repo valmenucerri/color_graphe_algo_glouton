@@ -10,5 +10,5 @@ if __name__ == "__main__":
     dico = gr.analyser_graphe(graphe,N)
     nb_arete = gr.liste_ordre_dico(dico)
     ordre = gr.tri(dico,nb_arete)
-    ac2.assigner_couleur_triee(dico,N,ordre)
-    #ac.assigner_couleur(dico,N)
+    #ac2.assigner_couleur_triee(dico,N,ordre)
+    ac.assigner_couleur(dico,N)

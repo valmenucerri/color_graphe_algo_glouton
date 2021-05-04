@@ -4,7 +4,7 @@ Créer un fichier .net qui contient des données aléatoires
 
 import random as r
 
-N = 10  # A changer comme désiré
+N = 150  # A changer comme désiré
 
 # créer un fichier try.net contenant N lignes contenant des couples aléatoires
 with open('Résultats/exemple{}.net'.format(N), 'w') as t:
