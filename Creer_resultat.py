@@ -32,7 +32,7 @@ def tracer_graphe(L,couleur):
     plt.xlim(-3, N * 4)
     plt.ylim(-3, N * 4)
     tracer_graph_final(L, x, y, liste_couleur)
-    plt.xlabel(str(len(couleur))+" couleurs")
+    plt.title(str(len(couleur))+" couleurs",color='red')
 
     plt.savefig("Résultats/exemple{}figure.pdf".format(N))
 
