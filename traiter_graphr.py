@@ -57,7 +57,7 @@ def liste_ordre_dico(dico):
     :param dico: le dictionnaire du graphe. type : dict
     :return: nb_arete: la liste contenant le nb d'arêtes pour chaque noeud (representés par les indices de la liste). type : list
     '''
-    #creer une liste dans laquelle est noté l'ordre des noeuds par nb d'arêtes décroissant
+
     nb_arete = []
     for i in dico.values():
         nb_arete.append(len(i))

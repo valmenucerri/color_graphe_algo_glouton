@@ -1,4 +1,4 @@
-from Creer_resultat import creer_fichier
+from Creer_resultat import creer_fichier,tracer_graphe
 def assigner_couleur(dico,N):
     '''Assigner une couleur, representee par un reel, à chaque noeud, en utilisant le minimum de couleur
     :param: dico, le dictionnaire représentant le graphe. type : dict
@@ -24,6 +24,7 @@ def assigner_couleur(dico,N):
                         traite.append(noeuds)
                         traite_partiel.append(noeuds)
             couleur.append(str(c_appli))
+    tracer_graphe(dico,couleur)
     creer_fichier(couleur,dico)
 
 

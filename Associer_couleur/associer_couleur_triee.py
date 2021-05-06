@@ -1,5 +1,5 @@
 '''Associer une couleur à chaque noeud d'un graphe, en commençant par le noeud ayant le plus d'arêtes'''
-from Creer_resultat import creer_fichier
+from Creer_resultat import creer_fichier,tracer_graphe
 from Associer_couleur.associer_couleur import non_adja_liste
 
 def assigner_couleur_triee(dico,N,ordre):
@@ -28,4 +28,5 @@ def assigner_couleur_triee(dico,N,ordre):
                         traite.append(noeuds)
                         traite_partiel.append(noeuds)
             couleur.append(str(c_appli))
+    tracer_graphe(dico,couleur)
     creer_fichier(couleur,dico)
