@@ -20,6 +20,12 @@ def creer_fichier(couleur,dico):
 
 
 def tracer_graphe(L,couleur):
+    '''
+    Tracer les deux graphes :le premier avec les noeuds non colorés, le deuxième avec les noeuds colorés selon les résultats trouvés
+    :param L: les noeuds et leurs liens. type : dict
+    :param couleur: la liste des numéros de couleur utilisés. type : list
+    :return: None
+    '''
     liste_couleur = creer_liste_couleur()
     N = len(L)
     x = [r.randrange(0, N * 4, 3) for i in range(N)]  # créer un nuage de points aléatoires représentant chaque noeud, x absisse et y ordonnée
@@ -38,6 +44,13 @@ def tracer_graphe(L,couleur):
 
 
 def tracer_graphe_init(L,x,y):
+    '''
+    Tracer le premier graphe, les noeuds sont noirs, avec leurs liaisons
+    :param L: les noeuds et leur liens. type : dict
+    :param x: les abscisses de points alétoires. type : list
+    :param y: les ordonnées de points aléatoires. type : list
+    :return: None
+    '''
     N = len(L)
     for pt in range(N):
         plt.scatter(x[pt], y[pt], s=N * 15, color='black')
@@ -48,6 +61,10 @@ def tracer_graphe_init(L,x,y):
                 plt.plot([x[noeud1],x[noeud2]],[y[noeud1],y[noeud2]],color='0.6',linestyle = "solid")
 
 def creer_liste_couleur():
+    '''
+    Créer une liste contenant toutes les couleurs offertes par matplotlib, de manière aléatoire
+    :return: liste_couleur: l'ensemble des couleurs possibles. type : list
+    '''
     dico_couleur = matplotlib.colors.cnames
     liste_couleur = []
 
@@ -57,6 +74,14 @@ def creer_liste_couleur():
     return liste_couleur
 
 def tracer_graph_final(L,x,y,liste_couleur):
+    '''
+    Tracer le deuxième grpahe, les noeuds sont colorés selon les résultats obtenus, et liés entre eux
+    :param L: les noeuds et leurs liaisons. type : dict
+    :param x: les abscisses de points aléatoires. type : list
+    :param y: les ordonnées de points aléatoires. type : list
+    :param liste_couleur: les couleurs possibles avec matplotlib. type : list
+    :return: None
+    '''
     N = len(L)
     for pt in range(N):
         plt.scatter(x[pt], y[pt], s=N * 15, color='black')
