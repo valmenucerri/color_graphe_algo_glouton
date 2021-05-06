@@ -30,11 +30,11 @@ def tracer_graphe(L,couleur):
     N = len(L)
     x = [r.randrange(0, N * 4, 3) for i in range(N)]  # créer un nuage de points aléatoires représentant chaque noeud, x absisse et y ordonnée
     y = [r.randrange(0, N * 4, 3) for y in range(N)]
-    plt.subplot(1, 2, 1)  # séparer le graphe en deux partiesn écrire sur la premier
+    plt.subplot(1, 2, 1)  # séparer le graphe en deux partiesn, écrire sur la premiere
     plt.xlim(-3, N * 4)
     plt.ylim(-3, N * 4)
     tracer_graphe_init(L, x, y)
-    plt.subplot(1,2,2)
+    plt.subplot(1,2,2)  # séparer le graphe en deux partiesn, écrire sur la deuxième
     plt.xlim(-3, N * 4)
     plt.ylim(-3, N * 4)
     tracer_graph_final(L, x, y, liste_couleur)
@@ -65,12 +65,12 @@ def creer_liste_couleur():
     Créer une liste contenant toutes les couleurs offertes par matplotlib, de manière aléatoire
     :return: liste_couleur: l'ensemble des couleurs possibles. type : list
     '''
-    dico_couleur = matplotlib.colors.cnames
+    dico_couleur = matplotlib.colors.cnames #récupérer les couleurs de matplolib dans un dictionnaire
     liste_couleur = []
 
     for couleur in dico_couleur:
         liste_couleur.append(couleur)
-    r.shuffle(liste_couleur)
+    r.shuffle(liste_couleur) #mélanger aléatoirement la liste de couleur
     return liste_couleur
 
 def tracer_graph_final(L,x,y,liste_couleur):
@@ -83,12 +83,10 @@ def tracer_graph_final(L,x,y,liste_couleur):
     :return: None
     '''
     N = len(L)
-    for pt in range(N):
-        plt.scatter(x[pt], y[pt], s=N * 15, color='black')
-        plt.text(x[pt] -1, y[pt]+1 , str(pt))
     for noeud1,noeud2_set in L.items():
         for noeud2 in noeud2_set:
-            if isinstance(noeud2,int):
+            if isinstance(noeud2,int): #tracer les liaisons
                 plt.plot([x[noeud1],x[noeud2]],[y[noeud1],y[noeud2]],color='0.6',linestyle = "solid")
-            else:
+            else: #colorer les points voulus
                 plt.scatter(x[noeud1],y[noeud1],s=N*15,color=liste_couleur[int(noeud2)])
+                plt.text(x[noeud1] - 1, y[noeud1] + 1, str(noeud1))
